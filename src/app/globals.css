@@ -1,0 +1,403 @@
+*{
+  margin : 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ body{
+  font-family: Arial, sans-serif;
+  /* background-color: #f0f0f0;
+  color : black */
+  }
+  a{
+    text-decoration: none;
+    color: #dd8b11;
+  }
+  h1,h2,h3{
+    font-weight: bold;
+
+  }
+
+.header h1 {
+  color: wheat;
+}
+.header {
+  height: 80px; /* Fixed height for header */
+  display: flex;
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Vertically center items */
+  padding: 0 20px; /* Horizontal padding */
+  background: transparent; /* Transparent background */
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.header img {
+  width: 400px; 
+  height: auto; 
+  object-fit: contain;
+  margin-top: 80px; 
+  margin-left: 5px; 
+  display: block; /* Ensures it doesn't behave as inline */
+}
+
+/* .logo {
+  width: 150px; 
+  height: 50px; 
+  display: flex;
+  align-items: center;
+} */
+.nav{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  
+} 
+.nav ul{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
+}
+ .nav ul li {
+  list-style: none;
+  display: inline-block;
+  padding: 15px 20px;
+  border-radius: 25px;
+  font-weight: 20px;
+  border: 2px solid #dd8b11;
+  color: wheat;
+   cursor: pointer;
+   position: relative;
+  overflow: hidden; 
+  margin-top: 80px;
+  
+   
+  
+}  
+.nav ul li::after {
+  content: '';
+  height: 100%;
+  width: 0;
+  background: #c78408;
+  position: absolute;
+  left: 0;
+  bottom: 0px;
+  transition: all 0.5s ease;
+  z-index: -1;
+}
+.nav ul li:hover::after {
+  width: 100%;
+}
+  .nav ul li:hover  {
+  color : black;
+  }
+  
+ 
+.hero {
+  width : 100%;
+  height: 100vh;
+  background: linear-gradient( rgba(22, 0, 0, 0.75), rgba(20, 0, 0, 0.75)), url("/hassaan image.jpg") ;
+  /* background: 
+  linear-gradient(rgba(0, 0, 0, 0.75), rgba(233, 149, 12, 0.75)), 
+  url("/landingPage.jpg"); */
+
+  background-size: cover;
+  background-position:center ;
+  background-repeat: no-repeat;
+}
+
+.welcome-section h1 {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  color: #d4a574;  
+  position: absolute;
+  left: 6%; 
+  top: 42%; 
+  transform: translateY(-50%); 
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.search-bar {
+  position: absolute; /* To position the search bar freely */
+  left: 5%; /* Adjust horizontal alignment from the left (tweak the percentage as needed) */
+  top: 50%; /* Vertically center the bar */
+  transform: translateY(-50%); /* Ensure perfect vertical centering */
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 40px;
+}
+
+.search-bar input {
+  border: 2px solid #d4a574;
+  border-radius: 30px;
+  padding: 0.5rem 1rem;
+  width: 300px;
+  background-color: transparent;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.search-bar input::placeholder {
+  color: wheat;
+}
+footer{
+  background-color: #212121;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+.About {
+  background: linear-gradient( rgba(22, 0, 0, 0.75), rgba(20, 0, 0, 0.75)), url("/hassaan image.jpg") ;
+  background-size: cover;
+  background-position:center ;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.about-content{
+  margin-bottom: 2rem;
+  width: 50%;
+  height: 35%;
+  gap: 10px;
+  margin-left: 80px;
+  margin-top: 100px;
+  color: white;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 25px;
+  
+
+}.fade-in {
+  margin-bottom: 20px;
+  font-size: 2rem;
+  margin-left: 5px;
+}
+p{
+  font-size: 19px;
+  margin-left: 5px;
+}
+/* ====== PRICE PLAN STYLES ====== */
+
+#price {
+  padding: 90px 20px;
+  background: linear-gradient(rgba(22, 0, 0, 0.75), rgba(20, 0, 0, 0.75)), url("/hassaan image.jpg");
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+}
+
+#price h1 {
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #fff;
+}
+
+.plans-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+/* Different Colors for Plans */
+.basic-plan .price-head {
+  color: #d4a574;
+  border: 2px solid  orange;;
+}
+
+.standard-plan .price-head {
+  color: #d4a574;
+  border: 2px solid orange;
+
+}
+
+.premium-plan .price-head {
+  color: #d4a574;
+  border: 2px solid orange;
+}
+
+.card {
+  position: relative;
+  width: 280px;
+  padding: 20px;
+  color: white;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent form */
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 10px rgba(255, 224, 166, 0.2);
+    border-radius: 15px;
+  text-align: center;
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+.card span {
+  position: absolute;
+  top: 6px;
+  left: 6px;
+  right: 6px;
+  bottom: 6px;
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent form */
+  z-index: -1;
+  border-radius: 1em;
+}
+
+.price-head {
+  padding: 15px;
+  width: 100%;
+  border-radius: 10px;
+  font-weight: bold;
+}
+
+h3 {
+  font-size: 22px;
+  text-transform: uppercase;
+}
+
+.price {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 15px 0;
+  
+}
+
+ul li {
+  font-size: 16px;
+  margin: 5px 0;
+  padding: 8px;
+  width: 100%;
+  text-align: left;
+  display: flex;
+  align-items: center;
+}
+
+/* Button */
+.btn {
+  background: #d4a574;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 25px;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: auto;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background: #b9740d;
+}
+
+/* Different Colors for Plans */
+.basic-plan .price-head {
+  background: transparent;
+}
+
+.standard-plan .price-head {
+  background: transparent;
+}
+
+.premium-plan .price-head {
+  background: transparent;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .plans-container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.Contact-form {
+  background: linear-gradient(rgba(22, 0, 0, 0.75), rgba(20, 0, 0, 0.75)), url("/hassaan image.jpg"); /* Set background to black */
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  z-index: 1; 
+  position: relative;
+}
+
+form {
+  width: 350px;
+  height: 420px; /* Medium height */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent form */
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  color: #d4a574;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 25px;
+  box-shadow: 0 4px 10px rgba(255, 224, 166, 0.2);
+  text-align: center;
+  margin-right: 70px;
+  margin-top: 40px;
+}
+.fade-in {
+  font-size: 40px;
+  color: #d4a574;
+  margin-bottom: 15px;
+}
+
+
+.Contact-form input,
+.Contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  border: 1px solid #d4a574;
+  border-radius: 5px;
+  font-size: 14px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+.Contact-form input::placeholder,
+.Contact-form textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7); /* Light gray placeholder for better visibility */
+  font-weight: 400;
+}
+
+.Contact-form textarea {
+  height: 80px; /* Normal height for text area */
+  resize: none;
+}
+
+.Contact-form button{
+  padding: 10px 20px;
+  background-color: #d4a574;
+  color: white;
+  border: navy;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+}
+.Contact-form button:hover{
+  background-color: #b9740d;
+}
