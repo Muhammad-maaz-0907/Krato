@@ -1,7 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
-// import Krato-logo-2 from './krato-logo-2.png'
 
 const Header = () => {
   return (
@@ -16,11 +15,18 @@ const Header = () => {
       />
     </div>
       <nav className='nav'>
-        <ul>
-          <Link  href="/home"> Home  </Link>
-          <Link  href="/about">  About </Link>
-          <Link  href="/packages"> Packages  </Link>
-          <Link  href="/contact"> Contact   </Link>
+        {/* <ul>
+          <Link  href="/home">  <li> Home </li> </Link>
+          <Link  href="/about">  <li>About</li> </Link>
+          <Link  href="/packages"> <li> Packages </li> </Link>
+          <Link  href="/contact"> <li>Contact  </li> </Link>
+           </ul> */}
+
+<ul>
+          <Link  href="/home">  <li> Home </li> </Link>
+          <Link  href="/about/page.tsx">  <li>About</li> </Link>
+          <Link  href="/packages"> <li> Packages </li> </Link>
+          <Link  href="/contact"> <li>Contact  </li> </Link>
            </ul>
            
       </nav>
